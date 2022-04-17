@@ -1,13 +1,13 @@
 {
-    "app-id" : "com.doycho.euterpe.gtk",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41",
-    "sdk" : "org.gnome.Sdk",
+    "app-id": "com.doycho.euterpe.gtk",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "41",
+    "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
-    "command" : "euterpe-gtk",
-    "finish-args" : [
+    "command": "euterpe-gtk",
+    "finish-args": [
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
@@ -16,7 +16,7 @@
         "--own-name=org.mpris.MediaPlayer2.Euterpe-Gtk",
         "--device=dri"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -27,11 +27,11 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dprofiling=false",
                 "-Dintrospection=enabled",
                 "-Dgtk_doc=false",
@@ -40,11 +40,11 @@
                 "-Dvapi=false",
                 "-Dglade_catalog=disabled"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy",
-                    "tag" : "1.2.1"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libhandy",
+                    "tag": "1.2.1"
                 }
             ]
         },
@@ -57,8 +57,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/e4/baf0031e39cf545f0c9edd5b1a2ea12609b7fcba2d58e118b11753d68cf0/typing_extensions-4.0.1-py3-none-any.whl",
-                    "sha256": "7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b",
+                    "url": "https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl",
+                    "sha256": "6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "typing_extensions",
@@ -76,8 +76,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/52/3be868c7ed1f408cb822bc92ce17ffe4e97d11c42caafce0589f05844dd0/semantic_version-2.8.5.tar.gz",
-                    "sha256": "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54",
+                    "url": "https://files.pythonhosted.org/packages/cb/56/4aa487b46d09646eb1863faa7026551d8309ece2281794bf13b20f28ab94/semantic_version-2.9.0.tar.gz",
+                    "sha256": "abf54873553e5e07a6fd4d5f653b781f5ae41297a493666b59dcf214006a12b2",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "semantic_version"
@@ -94,8 +94,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/67/08/e1aa2c582c62ac76e4d60f8e454bd3bba933781a06a88b4e38797445822a/setuptools-rust-1.1.2.tar.gz",
-                    "sha256": "a0adb9b503c0ffc4e8fe80b7c617898cefa78049983aaaea7f747e153a3e65d1",
+                    "url": "https://files.pythonhosted.org/packages/4e/02/2fc4c83b4f816fdd30f38c0c4837a322d21967f953bb9a51bce91b4511f6/setuptools-rust-1.2.0.tar.gz",
+                    "sha256": "0a4ada479e8c7e3d8bd7cb56e1a29acc2b2bb98c2325051b0cdcb57d7f056de8",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools-rust"
@@ -138,8 +138,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f9/4b/1cf8e281f7ae4046a59e5e39dd7471d46db9f61bb564fddbff9084c4334f/cryptography-36.0.1.tar.gz",
-                    "sha256": "53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638",
+                    "url": "https://files.pythonhosted.org/packages/10/a7/51953e73828deef2b58ba1604de9167843ee9cd4185d8aaffcb45dd1932d/cryptography-36.0.2.tar.gz",
+                    "sha256": "70f8f4f7bb2ac9f340655cbac89d68c527af5bb4387522a8413e841e3e6628c9",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "cryptography"
@@ -150,13 +150,13 @@
         },
         "pypi-dependencies.json",
         {
-            "name" : "euterpe-gtk",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "euterpe-gtk",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/ironsmile/euterpe-gtk.git",
+                    "type": "git",
+                    "url": "https://github.com/ironsmile/euterpe-gtk.git",
                     "tag": "v0.4.0",
                     "commit": "60ea57392bf7d2e6ee23d10af0922d01ec6c9fef"
                 }
