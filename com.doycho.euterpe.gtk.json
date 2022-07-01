@@ -1,13 +1,13 @@
 {
-    "app-id" : "com.doycho.euterpe.gtk",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41",
-    "sdk" : "org.gnome.Sdk",
+    "app-id": "com.doycho.euterpe.gtk",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "41",
+    "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
-    "command" : "euterpe-gtk",
-    "finish-args" : [
+    "command": "euterpe-gtk",
+    "finish-args": [
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
@@ -16,7 +16,7 @@
         "--own-name=org.mpris.MediaPlayer2.Euterpe-Gtk",
         "--device=dri"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -27,11 +27,11 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dprofiling=false",
                 "-Dintrospection=enabled",
                 "-Dgtk_doc=false",
@@ -40,11 +40,11 @@
                 "-Dvapi=false",
                 "-Dglade_catalog=disabled"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy",
-                    "tag" : "1.2.1"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libhandy",
+                    "tag": "1.2.1"
                 }
             ]
         },
@@ -57,8 +57,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/e4/baf0031e39cf545f0c9edd5b1a2ea12609b7fcba2d58e118b11753d68cf0/typing_extensions-4.0.1-py3-none-any.whl",
-                    "sha256": "7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b",
+                    "url": "https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl",
+                    "sha256": "25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "typing_extensions",
@@ -76,8 +76,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/52/3be868c7ed1f408cb822bc92ce17ffe4e97d11c42caafce0589f05844dd0/semantic_version-2.8.5.tar.gz",
-                    "sha256": "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54",
+                    "url": "https://files.pythonhosted.org/packages/7d/31/f2289ce78b9b473d582568c234e104d2a342fd658cc288a7553d83bb8595/semantic_version-2.10.0.tar.gz",
+                    "sha256": "bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "semantic_version"
@@ -94,8 +94,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/67/08/e1aa2c582c62ac76e4d60f8e454bd3bba933781a06a88b4e38797445822a/setuptools-rust-1.1.2.tar.gz",
-                    "sha256": "a0adb9b503c0ffc4e8fe80b7c617898cefa78049983aaaea7f747e153a3e65d1",
+                    "url": "https://files.pythonhosted.org/packages/a9/55/5db4a5b137af2afdc23a6e251d5ebb3b4e04c8deb68fbb5ffdacbd134c0c/setuptools-rust-1.3.0.tar.gz",
+                    "sha256": "958c5bf4ab6483d59dab888538121871cc5006354a42fb0fbd50acf03caad1de",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools-rust"
@@ -129,8 +129,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz",
-                    "sha256": "920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954",
+                    "url": "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz",
+                    "sha256": "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "cffi"
@@ -138,8 +138,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f9/4b/1cf8e281f7ae4046a59e5e39dd7471d46db9f61bb564fddbff9084c4334f/cryptography-36.0.1.tar.gz",
-                    "sha256": "53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638",
+                    "url": "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz",
+                    "sha256": "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "cryptography"
@@ -150,13 +150,13 @@
         },
         "pypi-dependencies.json",
         {
-            "name" : "euterpe-gtk",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "euterpe-gtk",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/ironsmile/euterpe-gtk.git",
+                    "type": "git",
+                    "url": "https://github.com/ironsmile/euterpe-gtk.git",
                     "tag": "v0.4.0",
                     "commit": "60ea57392bf7d2e6ee23d10af0922d01ec6c9fef"
                 }
