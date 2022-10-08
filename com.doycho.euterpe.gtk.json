@@ -157,8 +157,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ironsmile/euterpe-gtk.git",
-                    "tag": "v0.5.0",
-                    "commit": "f03e8104a062c45e5a8d1ca35377f552f24b5f6d"
+                    "tag": "v0.6.1",
+                    "commit": "2ad45e42a826f54e51a40d7dd8c6140c599efb14"
                 }
             ]
         }
