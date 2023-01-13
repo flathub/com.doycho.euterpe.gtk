@@ -13,6 +13,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
+        "--talk-name=org.freedesktop.secrets",
         "--own-name=org.mpris.MediaPlayer2.Euterpe-Gtk",
         "--device=dri"
     ],
@@ -157,8 +158,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ironsmile/euterpe-gtk.git",
-                    "tag": "v0.6.1",
-                    "commit": "2ad45e42a826f54e51a40d7dd8c6140c599efb14"
+                    "tag": "v0.6.2",
+                    "commit": "648e89d3274edf7c478c1ae0cd3ef81f8e17da64"
                 }
             ]
         }
