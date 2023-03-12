@@ -17,7 +17,7 @@ in order to generate the `pypi-dependencies.json` and `cargo-sources.json`.
 
 ```sh
 flatpak-cargo-generator ../cryptography/src/rust/Cargo.lock -o cargo-sources.json
-flatpak-pip-generator --requirements requrements.txt --output pypi-dependencies
+flatpak-pip-generator --requirements requirements.txt --output pypi-dependencies
 ```
 
 where  `../cryptography/src/rust/Cargo.lock` is from the previusly checked out
