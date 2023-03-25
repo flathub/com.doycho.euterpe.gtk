@@ -1,7 +1,7 @@
 {
     "app-id" : "com.doycho.euterpe.gtk",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -13,6 +13,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
+        "--talk-name=org.freedesktop.secrets",
         "--own-name=org.mpris.MediaPlayer2.Euterpe-Gtk",
         "--device=dri"
     ],
@@ -28,126 +29,10 @@
         "*.a"
     ],
     "modules" : [
-        {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dprofiling=false",
-                "-Dintrospection=enabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy",
-                    "tag" : "1.2.1"
-                }
-            ]
-        },
-        {
-            "name": "python3-typing_extensions",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} typing_extensions --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/e4/baf0031e39cf545f0c9edd5b1a2ea12609b7fcba2d58e118b11753d68cf0/typing_extensions-4.0.1-py3-none-any.whl",
-                    "sha256": "7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "typing_extensions",
-                        "packagetype": "bdist_wheel"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "python3-semantic_version",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} semantic_version --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/52/3be868c7ed1f408cb822bc92ce17ffe4e97d11c42caafce0589f05844dd0/semantic_version-2.8.5.tar.gz",
-                    "sha256": "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "semantic_version"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "python3-setuptools_rust",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} setuptools_rust --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/67/08/e1aa2c582c62ac76e4d60f8e454bd3bba933781a06a88b4e38797445822a/setuptools-rust-1.1.2.tar.gz",
-                    "sha256": "a0adb9b503c0ffc4e8fe80b7c617898cefa78049983aaaea7f747e153a3e65d1",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "setuptools-rust"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "python3-cryptography",
-            "build-options": {
-                "append-path": "/usr/lib/sdk/rust-stable/bin",
-                "env": {
-                    "CARGO_HOME": "/run/build/python3-cryptography/cargo",
-                    "CARGO_NET_OFFLINE": "true",
-                    "RUST_BACKTRACE": "1"
-                }
-            },
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} cryptography --no-build-isolation --no-binary cryptography"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz",
-                    "sha256": "e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "pycparser"
-                    }
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz",
-                    "sha256": "920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "cffi"
-                    }
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f9/4b/1cf8e281f7ae4046a59e5e39dd7471d46db9f61bb564fddbff9084c4334f/cryptography-36.0.1.tar.gz",
-                    "sha256": "53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "cryptography"
-                    }
-                },
-                "cargo-sources.json"
-            ]
-        },
+        "libhandy.json",
+        "python-setuptools-rust.json",
+        "cryptography-python-deps.json",
+        "cryptography.json",
         "pypi-dependencies.json",
         {
             "name" : "euterpe-gtk",
@@ -157,8 +42,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ironsmile/euterpe-gtk.git",
-                    "tag": "v0.5.0",
-                    "commit": "f03e8104a062c45e5a8d1ca35377f552f24b5f6d"
+                    "tag": "v0.6.2",
+                    "commit": "648e89d3274edf7c478c1ae0cd3ef81f8e17da64"
                 }
             ]
         }
