@@ -25,10 +25,10 @@ crypthography repo and version. Make sure that the checked out version is in syn
 the one in `pypi-dependencies.json`.
 
 Then copy the sources for `cryptography`, `cffi` and `pycparser` from `pypi-dependencies.json`
-into `com.doycho.euterpe.gtk.json`.
+into `cryptography.json`.
 
 Sometimes the build tools (such as `setuptools_rust`) may have to be updated in
-`com.doycho.euterpe.gtk.json`. I have no idea how to do that correctly so I am generally
+`python-setuptools-rust.json`. I have no idea how to do that correctly so I am generally
 copying what [Thonny](https://github.com/flathub/org.thonny.Thonny) did last.
 
 Pray 🙏
