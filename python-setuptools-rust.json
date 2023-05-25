@@ -9,8 +9,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/0b/8e/f1a0a5a76cfef77e1eb6004cb49e5f8d72634da638420b9ea492ce8305e8/typing_extensions-4.4.0-py3-none-any.whl",
-            "sha256": "16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e",
+            "url": "https://files.pythonhosted.org/packages/38/60/300ad6f93adca578bf05d5f6cd1d854b7d140bebe2f9829561aa9977d9f3/typing_extensions-4.6.2-py3-none-any.whl",
+            "sha256": "3a8b36f13dd5fdc5d1b16fe317f5668545de77fa0b8e02006381fd49d731ab98",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "typing_extensions",
@@ -28,8 +28,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/67/08/e1aa2c582c62ac76e4d60f8e454bd3bba933781a06a88b4e38797445822a/setuptools-rust-1.1.2.tar.gz",
-            "sha256": "a0adb9b503c0ffc4e8fe80b7c617898cefa78049983aaaea7f747e153a3e65d1",
+            "url": "https://files.pythonhosted.org/packages/0e/c9/6f9de9f7a8404416d5d22484ccdeb138f469cc1e11bbd62a2bd26d5c1385/setuptools-rust-1.6.0.tar.gz",
+            "sha256": "c86e734deac330597998bfbc08da45187e6b27837e23bd91eadb320732392262",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "setuptools-rust"
