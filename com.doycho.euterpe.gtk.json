@@ -1,7 +1,7 @@
 {
     "app-id" : "com.doycho.euterpe.gtk",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -43,8 +43,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ironsmile/euterpe-gtk.git",
-                    "tag": "v0.7.2",
-                    "commit": "6962a65c4331eabf4d4d7a125c5668409c3b220a"
+                    "tag": "v0.8.0",
+                    "commit": "a38174beebb7807e358b430d386db8ac39534612"
                 }
             ]
         }
