@@ -29,7 +29,6 @@
         "*.a"
     ],
     "modules" : [
-        "shared-modules/libsoup/libsoup-2.4.json",
         "libhandy.json",
         "python-setuptools-rust.json",
         "cryptography-python-deps.json",
@@ -43,8 +42,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ironsmile/euterpe-gtk.git",
-                    "tag": "v0.8.0",
-                    "commit": "a38174beebb7807e358b430d386db8ac39534612"
+                    "tag": "v0.8.1",
+                    "commit": "fa7cf1cac3ca860e605eb2c84e120178efbf5a85"
                 }
             ]
         }
