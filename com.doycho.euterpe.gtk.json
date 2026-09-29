@@ -29,9 +29,6 @@
         "*.a"
     ],
     "modules" : [
-        "python-setuptools-rust.json",
-        "cryptography-python-deps.json",
-        "cryptography.json",
         "pypi-dependencies.json",
         {
             "name" : "euterpe-gtk",

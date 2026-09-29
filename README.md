@@ -1,10 +1,12 @@
 # Euterpe GTK
 
-This builds the [GTK Client](https://github.com/ironsmile/euterpe-gtk/) for [Euterpe](https://listen-to-euterpe.eu/).
+This builds the [GTK Client](https://github.com/ironsmile/euterpe-gtk/) for
+[Euterpe](https://listen-to-euterpe.eu/).
 
 ## Implicit Dependencies
 
-Gstreamer and LibHandy are not explicitly listed as dependencies and are expected to be present.
+Gstreamer and LibHandy are not explicitly listed as dependencies and are expected to be
+present.
 
 ## Updating The Runtime
 
@@ -14,30 +16,18 @@ synchronized with Gnome version releases.
 
 ## Updating Dependencies
 
-First make sure to clone and checkout the appropriate version of
-[python-crypthography](https://github.com/pyca/cryptography).
+The [flatpak-pip-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/pip)
+is used in order to generate the `pypi-dependencies.json`.
 
-The [flatpak-cargo-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo) and
-[flatpak-pip-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/pip) are used
-in order to generate the `pypi-dependencies.json` and `cargo-sources.json`.
-
-```sh
-flatpak-cargo-generator ../cryptography/src/rust/Cargo.lock -o cargo-sources.json
-flatpak-pip-generator --requirements requirements.txt --output pypi-dependencies
+```bash
+flatpak-pip-generator --requirements requirements.txt \
+    --runtime=org.gnome.Sdk//50 \
+    --output pypi-dependencies \
+    --prefer-wheels=keyring,cryptography
 ```
 
-where `../cryptography/src/rust/Cargo.lock` is from the previously checked out
-crypthography repo and version. Make sure that the checked out version is in sync with
-the one in `pypi-dependencies.json`.
-
-Then copy the sources for `cryptography`, `cffi` and `pycparser` from `pypi-dependencies.json`
-into `cryptography.json`.
-
-Sometimes the build tools (such as `setuptools_rust`) may have to be updated in
-`python-setuptools-rust.json`. I have no idea how to do that correctly so I am generally
-copying what [Thonny](https://github.com/flathub/org.thonny.Thonny) did last.
-
-Pray 🙏
+Make sure the runtime used in the `flatpak-pip-generator` command is the same one used by
+the application in `com.doycho.euterpe.gtk.json`.
 
 ## Building Locally
 
