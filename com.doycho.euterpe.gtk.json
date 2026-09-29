@@ -1,7 +1,7 @@
 {
     "app-id" : "com.doycho.euterpe.gtk",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "48",
+    "runtime-version" : "50",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -29,10 +29,6 @@
         "*.a"
     ],
     "modules" : [
-        "libhandy.json",
-        "python-setuptools-rust.json",
-        "cryptography-python-deps.json",
-        "cryptography.json",
         "pypi-dependencies.json",
         {
             "name" : "euterpe-gtk",
